@@ -1,0 +1,183 @@
+fileVersion: 1
+id: 0a3fc305-1ba8-47f0-8855-d05f2751436d
+name: DVSTG_POLICY
+operation:
+  config:
+    contains_multiactive_data: false
+    generate_ghost_records: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c088c2dd-6210-4d9b-ab9c-a547aa652e1f
+          stepCounter: 0a3fc305-1ba8-47f0-8855-d05f2751436d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: POLICY_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aeade679-3294-4492-a644-f80d48941ad0
+                stepCounter: 8196694a-7c6e-49c6-8896-8f22e743fada
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: af5becc4-e3b0-46f1-9158-6e260b9c0b9a
+          stepCounter: 0a3fc305-1ba8-47f0-8855-d05f2751436d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 44a18d51-d548-478d-9540-91d0b1adcf0e
+                stepCounter: 8196694a-7c6e-49c6-8896-8f22e743fada
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe223d3f-4e84-4b04-b87c-437c2ad2aba5
+          stepCounter: 0a3fc305-1ba8-47f0-8855-d05f2751436d
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: POLICY_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 124fe056-ebb3-4694-a1b6-9552b160be63
+                stepCounter: 8196694a-7c6e-49c6-8896-8f22e743fada
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b44444e9-78bb-4ba0-bb38-b8de2e98de1c
+          stepCounter: 0a3fc305-1ba8-47f0-8855-d05f2751436d
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: COVERAGE_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a70d39a4-4ae7-4f80-8b1f-21bbe7850179
+                stepCounter: 8196694a-7c6e-49c6-8896-8f22e743fada
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 601c8c62-eea2-4baf-a1be-aeb4c2665cf1
+          stepCounter: 0a3fc305-1ba8-47f0-8855-d05f2751436d
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: PREMIUM_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 83e89e21-877b-45b1-81de-5771e3ce99a8
+                stepCounter: 8196694a-7c6e-49c6-8896-8f22e743fada
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7fd91828-749a-4cfe-9a55-e098627b84a6
+          stepCounter: 0a3fc305-1ba8-47f0-8855-d05f2751436d
+        config: {}
+        dataType: DATE
+        description: ""
+        name: START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 44803be9-de47-45b6-9418-53f7d1b5b792
+                stepCounter: 8196694a-7c6e-49c6-8896-8f22e743fada
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bddaaa4a-a12b-47f8-9fe5-edf6c764bf86
+          stepCounter: 0a3fc305-1ba8-47f0-8855-d05f2751436d
+        config: {}
+        dataType: DATE
+        description: ""
+        name: END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 98784ac5-9820-4463-8265-c6daf243ead5
+                stepCounter: 8196694a-7c6e-49c6-8896-8f22e743fada
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 06cd133d-d133-4bfb-a4ed-abde3a40db81
+          stepCounter: 0a3fc305-1ba8-47f0-8855-d05f2751436d
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 80c32ad5-b856-4b8b-b67c-b83a830325fc
+                stepCounter: 8196694a-7c6e-49c6-8896-8f22e743fada
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef332632-24c5-4813-92bf-39de92665851
+          stepCounter: 0a3fc305-1ba8-47f0-8855-d05f2751436d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        is_system_ldts: true
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: SYSDATE()
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7a137fb-8e09-4ec0-8ba3-1c5f2c8a9dfc
+          stepCounter: 0a3fc305-1ba8-47f0-8855-d05f2751436d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: The Record Source (RSRC) describes the source of this data.
+        is_system_rsrc: true
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "{{record_source()}}"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          POLICY: 8196694a-7c6e-49c6-8896-8f22e743fada
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: POLICY
+        join:
+          joinCondition: FROM {{ ref('SRC', 'POLICY') }} "POLICY"
+        name: DVSTG_POLICY
+        noLinkRefs: []
+  name: DVSTG_POLICY
+  overrideSQL: false
+  schema: ""
+  sqlType: Data-vault-3-0-0:::4
+  type: sql
+  version: 1
+type: Node

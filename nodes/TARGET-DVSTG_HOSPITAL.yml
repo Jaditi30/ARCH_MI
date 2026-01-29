@@ -1,0 +1,127 @@
+fileVersion: 1
+id: 0b4455df-2509-4843-86ee-a8cbc67f443b
+name: DVSTG_HOSPITAL
+operation:
+  config:
+    contains_multiactive_data: false
+    generate_ghost_records: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d3d6064d-7e14-41e0-9e09-1b2d547bac37
+          stepCounter: 0b4455df-2509-4843-86ee-a8cbc67f443b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: HOSPITAL_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c2531aef-4bff-4ae4-be91-66f74f662b0f
+                stepCounter: 5ed10ca5-922c-4498-a007-6ac0e46041e0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 21e204c8-08fb-4205-9eab-d693d73d713f
+          stepCounter: 0b4455df-2509-4843-86ee-a8cbc67f443b
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: HOSPITAL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 509a6ef8-85a7-4981-86a6-223ae86784b2
+                stepCounter: 5ed10ca5-922c-4498-a007-6ac0e46041e0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 98d55833-9a24-4f1e-9ddf-1063adda3716
+          stepCounter: 0b4455df-2509-4843-86ee-a8cbc67f443b
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 291638b2-25ad-4ed8-8b91-7c59da947a67
+                stepCounter: 5ed10ca5-922c-4498-a007-6ac0e46041e0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 11e40005-cf28-4328-baf4-f6a4a73daf39
+          stepCounter: 0b4455df-2509-4843-86ee-a8cbc67f443b
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: CONTACT_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b9b5015d-ab3d-4350-bcda-3710f9c949a4
+                stepCounter: 5ed10ca5-922c-4498-a007-6ac0e46041e0
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b31cdb48-518e-4a73-acca-52d9207f8e6f
+          stepCounter: 0b4455df-2509-4843-86ee-a8cbc67f443b
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        is_system_ldts: true
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: SYSDATE()
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10b05eeb-05f5-4373-be92-51dde7018357
+          stepCounter: 0b4455df-2509-4843-86ee-a8cbc67f443b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: The Record Source (RSRC) describes the source of this data.
+        is_system_rsrc: true
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "{{record_source()}}"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          HOSPITAL: 5ed10ca5-922c-4498-a007-6ac0e46041e0
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: HOSPITAL
+        join:
+          joinCondition: FROM {{ ref('SRC', 'HOSPITAL') }} "HOSPITAL"
+        name: DVSTG_HOSPITAL
+        noLinkRefs: []
+  name: DVSTG_HOSPITAL
+  overrideSQL: false
+  schema: ""
+  sqlType: Data-vault-3-0-0:::4
+  type: sql
+  version: 1
+type: Node

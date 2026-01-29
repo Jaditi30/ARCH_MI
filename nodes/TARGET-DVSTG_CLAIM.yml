@@ -1,0 +1,183 @@
+fileVersion: 1
+id: d2709b74-bf9c-45fb-b282-29f940369c17
+name: DVSTG_CLAIM
+operation:
+  config:
+    contains_multiactive_data: false
+    generate_ghost_records: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4233d2b-b1e2-4f69-a25a-423f0fc30b50
+          stepCounter: d2709b74-bf9c-45fb-b282-29f940369c17
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CLAIM_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: baa34581-6eda-4d8d-b99a-0e758a96f559
+                stepCounter: 232b096b-8a8a-4840-bfc0-f0ee447efe25
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48077092-71a5-434f-9655-392bde5b257f
+          stepCounter: d2709b74-bf9c-45fb-b282-29f940369c17
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: POLICY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 941a88c5-b9d5-41f0-997e-5bd183469abc
+                stepCounter: 232b096b-8a8a-4840-bfc0-f0ee447efe25
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 19ecc76c-4b01-4cb7-917e-a18783b9c34f
+          stepCounter: d2709b74-bf9c-45fb-b282-29f940369c17
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CLAIM_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: de4baef9-16c0-4393-82ea-308fb5f4f457
+                stepCounter: 232b096b-8a8a-4840-bfc0-f0ee447efe25
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 66018945-8c06-43a1-97c2-13ca289c49ed
+          stepCounter: d2709b74-bf9c-45fb-b282-29f940369c17
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: CLAIM_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f71e79b0-c496-4dae-a9ff-2ff34e8aec34
+                stepCounter: 232b096b-8a8a-4840-bfc0-f0ee447efe25
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4d23920-5a27-4c75-ae30-b07720facb98
+          stepCounter: d2709b74-bf9c-45fb-b282-29f940369c17
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: APPROVED_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ecfaa728-a9e2-4a73-9c87-7c5989259da8
+                stepCounter: 232b096b-8a8a-4840-bfc0-f0ee447efe25
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c5a28909-11ed-4f08-a386-840ca4ef4fd4
+          stepCounter: d2709b74-bf9c-45fb-b282-29f940369c17
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: CLAIM_STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8f4ae5b8-7473-4ee3-9775-d1ce621f2c76
+                stepCounter: 232b096b-8a8a-4840-bfc0-f0ee447efe25
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c6e104b-e3e4-4f42-8b4e-cf2616f5f0c4
+          stepCounter: d2709b74-bf9c-45fb-b282-29f940369c17
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: DIAGNOSIS_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ad5a131e-f3ae-4423-80c4-73645493db52
+                stepCounter: 232b096b-8a8a-4840-bfc0-f0ee447efe25
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 823cceba-8a3d-4534-b6b8-984b9589b83c
+          stepCounter: d2709b74-bf9c-45fb-b282-29f940369c17
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: HOSPITAL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 023029ee-6532-4ce2-966f-6d3fe4e1c237
+                stepCounter: 232b096b-8a8a-4840-bfc0-f0ee447efe25
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2ea5c642-c08d-4bfb-b9dc-e992565d94c0
+          stepCounter: d2709b74-bf9c-45fb-b282-29f940369c17
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        is_system_ldts: true
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: SYSDATE()
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79071d61-75b4-4b9c-a67a-bb77bd49be49
+          stepCounter: d2709b74-bf9c-45fb-b282-29f940369c17
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: The Record Source (RSRC) describes the source of this data.
+        is_system_rsrc: true
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "{{record_source()}}"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          CLAIM: 232b096b-8a8a-4840-bfc0-f0ee447efe25
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: CLAIM
+        join:
+          joinCondition: FROM {{ ref('SRC', 'CLAIM') }} "CLAIM"
+        name: DVSTG_CLAIM
+        noLinkRefs: []
+  name: DVSTG_CLAIM
+  overrideSQL: false
+  schema: ""
+  sqlType: Data-vault-3-0-0:::4
+  type: sql
+  version: 1
+type: Node
