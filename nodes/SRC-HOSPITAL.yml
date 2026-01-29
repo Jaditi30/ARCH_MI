@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 05ca6e7a-a3bd-455a-ad14-f7f280a5012a
+name: HOSPITAL
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 969baafa-df68-4d61-9a5d-17baf9291a50
+          stepCounter: 05ca6e7a-a3bd-455a-ad14-f7f280a5012a
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: HOSPITAL_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 748b6a5c-9f9d-4a56-a85d-8b45bec22ab7
+          stepCounter: 05ca6e7a-a3bd-455a-ad14-f7f280a5012a
+        config: {}
+        dataType: VARCHAR(100)
+        defaultValue: ""
+        description: ""
+        name: HOSPITAL_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20e94879-68f1-4c35-8d28-6e3f175cece8
+          stepCounter: 05ca6e7a-a3bd-455a-ad14-f7f280a5012a
+        config: {}
+        dataType: VARCHAR(100)
+        defaultValue: ""
+        description: ""
+        name: LOCATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: df208ec8-ea2a-4c60-9e15-8867cf77ced4
+          stepCounter: 05ca6e7a-a3bd-455a-ad14-f7f280a5012a
+        config: {}
+        dataType: VARCHAR(15)
+        defaultValue: ""
+        description: ""
+        name: CONTACT_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: HOSPITAL
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

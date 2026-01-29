@@ -1,0 +1,95 @@
+fileVersion: 1
+id: b4a42335-04fa-4523-87f9-1eac6afe4207
+name: HUB_HOSPITAL
+operation:
+  config:
+    disable_hwm: true
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03bf28ed-51d8-4d77-90f1-7c84ec6dee9b
+          stepCounter: b4a42335-04fa-4523-87f9-1eac6afe4207
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: HOSPITAL_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 969baafa-df68-4d61-9a5d-17baf9291a50
+                stepCounter: 05ca6e7a-a3bd-455a-ad14-f7f280a5012a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f9a8e960-7f47-4f4c-9e2a-b15a9dce715e
+          stepCounter: b4a42335-04fa-4523-87f9-1eac6afe4207
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: HOSPITAL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 748b6a5c-9f9d-4a56-a85d-8b45bec22ab7
+                stepCounter: 05ca6e7a-a3bd-455a-ad14-f7f280a5012a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0fb865a-c973-4056-af7e-a5d2af6eb0d4
+          stepCounter: b4a42335-04fa-4523-87f9-1eac6afe4207
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 20e94879-68f1-4c35-8d28-6e3f175cece8
+                stepCounter: 05ca6e7a-a3bd-455a-ad14-f7f280a5012a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a6086ffe-6fef-4bda-9457-76befd6a95fe
+          stepCounter: b4a42335-04fa-4523-87f9-1eac6afe4207
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: CONTACT_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: df208ec8-ea2a-4c60-9e15-8867cf77ced4
+                stepCounter: 05ca6e7a-a3bd-455a-ad14-f7f280a5012a
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          HOSPITAL: 05ca6e7a-a3bd-455a-ad14-f7f280a5012a
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: HOSPITAL
+        join:
+          joinCondition: FROM {{ ref('SRC', 'HOSPITAL') }} "HOSPITAL"
+        name: HUB_HOSPITAL
+        noLinkRefs: []
+  name: HUB_HOSPITAL
+  overrideSQL: false
+  schema: ""
+  sqlType: DataVault:::6
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,95 @@
+fileVersion: 1
+id: f9d09fc0-11ef-4ff6-8493-32da91afecbe
+name: HUB_EMPLOYEES
+operation:
+  config:
+    disable_hwm: true
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e4fa709b-e4c9-4ad5-a5a7-f4a3b5f9f7b3
+          stepCounter: f9d09fc0-11ef-4ff6-8493-32da91afecbe
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6b17601d-ed70-4be1-9331-83e719b71266
+                stepCounter: 57b8d10a-c305-449c-9591-b4d4a11cf879
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c4472a0-095c-49cf-8863-6b9b5ec55d2a
+          stepCounter: f9d09fc0-11ef-4ff6-8493-32da91afecbe
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e8aa44fd-132f-41ca-a7bc-a02cbf8bdf6d
+                stepCounter: 57b8d10a-c305-449c-9591-b4d4a11cf879
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d0e5cb6-ee86-48d0-abdc-715d8c39d517
+          stepCounter: f9d09fc0-11ef-4ff6-8493-32da91afecbe
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: SALARY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9c5c1068-ed7f-48a6-bf43-6df64ed73250
+                stepCounter: 57b8d10a-c305-449c-9591-b4d4a11cf879
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6c660b63-3055-4629-8f05-4f6f8a21bb8e
+          stepCounter: f9d09fc0-11ef-4ff6-8493-32da91afecbe
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: DEPARTMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 825d3dcd-4800-431d-8f70-893037aa02b0
+                stepCounter: 57b8d10a-c305-449c-9591-b4d4a11cf879
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          EMPLOYEES: 57b8d10a-c305-449c-9591-b4d4a11cf879
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: EMPLOYEES
+        join:
+          joinCondition: FROM {{ ref('SRC', 'EMPLOYEES') }} "EMPLOYEES"
+        name: HUB_EMPLOYEES
+        noLinkRefs: []
+  name: HUB_EMPLOYEES
+  overrideSQL: false
+  schema: ""
+  sqlType: DataVault:::6
+  type: sql
+  version: 1
+type: Node

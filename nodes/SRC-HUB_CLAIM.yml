@@ -1,0 +1,151 @@
+fileVersion: 1
+id: b74ac9e0-78d8-4ecc-ad27-9aa6836e50e7
+name: HUB_CLAIM
+operation:
+  config:
+    disable_hwm: true
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 139a48d7-b474-40b3-abe4-4ca56ed4b936
+          stepCounter: b74ac9e0-78d8-4ecc-ad27-9aa6836e50e7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CLAIM_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1476be86-ffec-41b5-94a5-bfa024d2609b
+                stepCounter: 35173922-8825-4b9b-b665-4602857b045d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d3468c00-475c-4977-a9d5-22586d4c827d
+          stepCounter: b74ac9e0-78d8-4ecc-ad27-9aa6836e50e7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: POLICY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c1343dd2-bc8c-4d9a-816a-f8902308501a
+                stepCounter: 35173922-8825-4b9b-b665-4602857b045d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 53003f38-db52-42a5-90a3-4018d8eed2c7
+          stepCounter: b74ac9e0-78d8-4ecc-ad27-9aa6836e50e7
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CLAIM_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1c510c7-a7c5-43bc-a7dd-caee6b49e2ef
+                stepCounter: 35173922-8825-4b9b-b665-4602857b045d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71960ed5-e918-42e5-87b7-8f332452c610
+          stepCounter: b74ac9e0-78d8-4ecc-ad27-9aa6836e50e7
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: CLAIM_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e66f2a53-1dbd-430b-9a4d-45a3a5002472
+                stepCounter: 35173922-8825-4b9b-b665-4602857b045d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9afdce89-ae76-4d10-aae0-d3c3861e6fc3
+          stepCounter: b74ac9e0-78d8-4ecc-ad27-9aa6836e50e7
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: APPROVED_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 646bd331-9ff7-4230-bc20-bedf8f67aebc
+                stepCounter: 35173922-8825-4b9b-b665-4602857b045d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ba7b4cd-6e2b-4a3a-a58c-9cab9e721a6c
+          stepCounter: b74ac9e0-78d8-4ecc-ad27-9aa6836e50e7
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: CLAIM_STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a22a3a64-0c75-4b9c-ac95-6503890aa044
+                stepCounter: 35173922-8825-4b9b-b665-4602857b045d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 80102e2c-58a4-4a83-a79c-3863bf899918
+          stepCounter: b74ac9e0-78d8-4ecc-ad27-9aa6836e50e7
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: DIAGNOSIS_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5bc8be64-5063-434d-a0c6-bff39aae0ce7
+                stepCounter: 35173922-8825-4b9b-b665-4602857b045d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e6f6e0fc-c90c-4aca-9f0e-b121b1f5260d
+          stepCounter: b74ac9e0-78d8-4ecc-ad27-9aa6836e50e7
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: HOSPITAL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eba3231e-b465-4f82-aff5-f33224a0fb72
+                stepCounter: 35173922-8825-4b9b-b665-4602857b045d
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          CLAIM: 35173922-8825-4b9b-b665-4602857b045d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: CLAIM
+        join:
+          joinCondition: FROM {{ ref('SRC', 'CLAIM') }} "CLAIM"
+        name: HUB_CLAIM
+        noLinkRefs: []
+  name: HUB_CLAIM
+  overrideSQL: false
+  schema: ""
+  sqlType: DataVault:::6
+  type: sql
+  version: 1
+type: Node
